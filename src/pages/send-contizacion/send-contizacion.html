@@ -1,0 +1,34 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title text-center>Cotización</ion-title>
+
+        <ion-buttons end>
+            <button (click)="close()" ion-button icon-only style="padding: 16px 8px;">
+                  <i style="font-size: 30px;" class="fa fa-times" aria-hidden="true"></i>
+                </button>
+        </ion-buttons>
+
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+
+        <ion-item>
+            <ion-label style="font-size: 18px;" color="azul-claro" stacked>Valor de servicio</ion-label>
+            <ion-input placeholder="Escriba el valor de su servicio"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label style="font-size: 18px;" color="azul-claro" stacked>Descripción</ion-label>
+            <ion-input placeholder="Escriba que incluye"></ion-input>
+        </ion-item>
+
+
+    </ion-list>
+    <button color="pronto-verde" style="width:90%;margin-left:5%" class="btn-text-left" ion-button block margin-bottom="2" (click)="close()">
+        Enviar cotización
+        </button>
+</ion-content>

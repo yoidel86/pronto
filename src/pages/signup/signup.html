@@ -1,0 +1,73 @@
+<ion-header>
+    <ion-navbar color="pronto-verde">
+        <ion-title text-center>
+            ProntoCarga.com
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+
+    <ion-label text-center color="azul-claro">Registro de usuario</ion-label>
+
+    <hr style="background-color: #88868B;">
+
+    <!-- <form (submit)="doLogin()"> -->
+    <form (submit)="f.form.valid ? doSignUp() : llenarCampos()" #f="ngForm">
+        <ion-list>
+            <ion-item>
+                <ion-label>Tipo de usuario</ion-label>
+                <ion-select name="rol" [(ngModel)]="user.rol" required>
+                    <ion-option value="1">Transportista</ion-option>
+                    <ion-option value="2">Cliente</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label stacked>Nombre completo</ion-label>
+                <ion-input type="text" name="name" class="form-control" [(ngModel)]="user.name" placeholder="Escriba su nombre" required></ion-input>
+
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Correo electrónico</ion-label>
+                <ion-input type="email" name="email" class="form-control" [(ngModel)]="user.email" placeholder="Escriba su correo..." required email></ion-input>
+
+            </ion-item>
+            <ion-item>
+                <ion-label stacked>Contraseña</ion-label>
+                <ion-input type="password" name="password" class="form-control" [ngModel]="user.password" placeholder="Escriba su contraseña..." required></ion-input>
+
+            </ion-item>
+            <ion-item>
+                <ion-label stacked>Teléfono móvil</ion-label>
+                <ion-input type="number" class="form-control" placeholder="Escriba su movil..." required></ion-input>
+            </ion-item>
+            <div *ngIf="user.rol == '1'">
+                <ion-item>
+                    <ion-label>Pais</ion-label>
+                    <ion-select>
+                        <ion-option value="1">Ecuador</ion-option>
+                        <ion-option value="2">Cuba</ion-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Ciudad</ion-label>
+                    <ion-select>
+                        <ion-option value="1">Transportista</ion-option>
+                        <ion-option value="2">Cliente</ion-option>
+                    </ion-select>
+                </ion-item>
+            </div>
+            <div padding>
+                <button class="btn-text-left" text-left color="pronto-gris" ion-button block margin-bottom="1" margin-top="2">
+
+                   Registrarse
+
+                </button>
+            </div>
+
+        </ion-list>
+    </form>
+</ion-content>

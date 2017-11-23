@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar color="pronto-verde">
+        <ion-title text-center>
+            ProntoCarga.com
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-label text-center color="pronto-gris">Solicitudes de traslado</ion-label>
+
+    <hr style="background-color: #88868B;">
+    <ion-list>
+        <ion-item>
+            <h2 style="color: #4da82b">Titulo 1</h2>
+            <p><strong> Personal adicional:</strong> 2</p>
+            <p><strong> Fecha entrega:</strong> 2014-04-20</p>
+            <p style="white-space: normal;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione quos minima molestias, doloremque ipsam animi eligendi placeat itaque provident, sunt voluptatum, expedita ea sit asperiores sint vel iusto doloribus quis.</p>
+            <button (click)="enviarCotizacion()" color="pronto-gris" ion-button block>Enviar cotización</button>
+        </ion-item>
+        <ion-item>
+            <h2 style="color: #4da82b">Titulo 2</h2>
+            <p><strong> Personal adicional:</strong> 4</p>
+            <p><strong> Fecha entrega:</strong> 2014-04-20</p>
+            <p style="white-space: normal;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione quos minima molestias, doloremque ipsam animi eligendi placeat itaque provident, sunt voluptatum, expedita ea sit asperiores sint vel iusto doloribus quis.</p>
+            <p style="color: #4da82b"> Cotización enviada</p>
+            <button (click)="enviarCotizacion()" color="pronto-gris" ion-button block>Reenviar cotización</button>
+        </ion-item>
+        <ion-item>
+            <h2 style="color: #4da82b">Titulo 3</h2>
+            <p><strong> Personal adicional:</strong> 1</p>
+            <p><strong> Fecha entrega:</strong> 2014-04-20</p>
+            <p style="white-space: normal;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione quos minima molestias, doloremque ipsam animi eligendi placeat itaque provident, sunt voluptatum, expedita ea sit asperiores sint vel iusto doloribus quis.</p>
+            <button (click)="enviarCotizacion()" color="pronto-gris" ion-button block>Enviar cotización</button>
+        </ion-item>
+    </ion-list>
+</ion-content>

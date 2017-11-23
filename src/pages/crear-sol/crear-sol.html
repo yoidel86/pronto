@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-navbar color="pronto-verde">
+        <ion-title text-center>
+            ProntoCarga.com
+        </ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+    <ion-label text-center color="pronto-gris">Crear solicitud</ion-label>
+
+    <hr style="background-color: #88868B;">
+    <form (submit)="f.form.valid ? addSol() : llenarCampos()" #f="ngForm">
+        <ion-list>
+            <ion-item>
+                <ion-label stacked>Titulo</ion-label>
+                <ion-input type="text" class="form-control" required></ion-input>
+
+            </ion-item>
+            <ion-item>
+                <ion-label>Categoría de la carga</ion-label>
+                <ion-select name="categoria" [(ngModel)]="categoria" required>
+                    <ion-option value="1">Líquidos</ion-option>
+                    <ion-option value="2">Tecnología</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Subcategoría de la carga</ion-label>
+                <ion-select required>
+                    <ion-option *ngIf="categoria == '1'">Cerveza</ion-option>
+                    <ion-option *ngIf="categoria == '1'">Resfresco</ion-option>
+                    <ion-option *ngIf="categoria == '2'">Televisor</ion-option>
+                    <ion-option *ngIf="categoria == '2'">Teléfono</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label stacked>Persona Adicional</ion-label>
+                <ion-input type="text" class="form-control"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Fecha del traslado</ion-label>
+                <ion-datetime displayFormat="MM/DD/YYYY"></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-label stacked>Persona Adicional</ion-label>
+                <ion-input type="text" class="form-control"></ion-input>
+            </ion-item>
+
+            <div padding>
+                <button class="btn-text-left" text-left color="pronto-gris" ion-button block margin-bottom="1" margin-top="2">
+                     Crear solicitud
+                  </button>
+            </div>
+
+        </ion-list>
+    </form>
+</ion-content>
